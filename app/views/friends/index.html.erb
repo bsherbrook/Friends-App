@@ -1,14 +1,13 @@
-<p style="color: green"><%= notice %></p>
-
 <h1>Friends List</h1>
 
 <div id="friends">
   <% @friends.each do |friend| %>
-    <div class="card card-fluid"><%= render friend %>
-    <p>
-      <%= link_to "Show this friend", friend, class:'btn btn-primary' %>
-    </p>
-    <%= button_to "Destroy this friend", friend, method: :delete , class:'btn btn-secondary' %>
+    <div class="friend-card">
+      <%= render friend %>
+      <div class='card-button-box'>
+        <%= link_to "Details", friend, class:'btn btn-primary' %>
+        <%= button_to "Delete", friend, method: :delete , class:'btn btn-secondary' %>
+      </div>
   </div>
   <% end %>
 </div>
@@ -24,18 +23,18 @@
     </tr>
   </thead>
   <tbody>
-      <% @friends.each do |friend|%>
+    <% @friends.each do |friend|%>
       <tr>
-      <td><%= friend.first_name %></td> 
-      <td><%= friend.last_name %></td> 
-      <td><%= friend.email %></td> 
-      <td><%= friend.phone %></td> 
-      <td><%= friend.twitter %></td>      
-      <td><%= link_to "Show", friend %></td>
-      <td><%= link_to "Edit", friend, method: :edit %></td>
-      <td><%= button_to "Destroy", friend, method: :delete %></td>
+        <td><%= friend.first_name %></td> 
+        <td><%= friend.last_name %></td> 
+        <td><%= friend.email %></td> 
+        <td><%= friend.phone %></td> 
+        <td><%= friend.twitter %></td>      
+        <td><%= link_to "Show", friend %></td>
+        <td><%= link_to "Edit", friend, method: :edit %></td>
+        <td><%= button_to "Destroy", friend, method: :delete %></td>
       </tr>
-      <%end%>
+    <%end%>
   </tbody>
   </table>
 <%= link_to "New friend", new_friend_path, class:'btn btn-secondary' %>

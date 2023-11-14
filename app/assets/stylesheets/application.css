@@ -1,1 +1,21 @@
-
+.notice-card{
+    padding: 10px;
+    background-color: aliceblue;
+    text-align: center;
+}
+.friend-card{
+    background-color: rgb(215, 228, 250);
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+.friend-card-name{
+    font-size: 35px;
+}
+.friend-card-subtext{
+    font-size: 20px;
+}
+.card-button-box{
+    display:flex;
+    gap: 10px;
+}
