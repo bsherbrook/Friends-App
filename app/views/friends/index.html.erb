@@ -1,6 +1,6 @@
 <h1>Friends List</h1>
 
-<div id="friends">
+<div id="friends" data-controller='drag'>
   <% @friends.each do |friend| %>
   <% if friend.user == current_user%>
     <div class="friend-card">
